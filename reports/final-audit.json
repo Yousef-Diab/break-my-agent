@@ -1,0 +1,77 @@
+{
+  "verifiedAt": "2026-11-02",
+  "requiredArtifactsPresent": [
+    "src/credit.ts",
+    "src/retrieval.ts",
+    "src/openrouter.ts",
+    "src/agent.ts",
+    "src/app.ts",
+    "client/App.tsx",
+    "client/TraceInspector.tsx",
+    "PRESENTATION-GUIDE.md",
+    "public/guide.html",
+    "VERIFICATION.md",
+    "reports/LIVE-VALIDATION.md",
+    "reports/live-benign.json",
+    "reports/live-poisoned-baseline.json",
+    "reports/live-poisoned-guarded.json",
+    "reports/live-followup.json",
+    "reports/controlled-baseline.json",
+    "reports/controlled-guarded-replay.json",
+    "reports/regression-report.json"
+  ],
+  "ordinaryTests": {
+    "passed": 44,
+    "total": 44
+  },
+  "controlledScenarios": {
+    "passed": 11,
+    "total": 11
+  },
+  "liveSamples": {
+    "samples": 4,
+    "providerRequests": 7,
+    "reportedCostUsd": 0.0016636,
+    "allCostsReported": true,
+    "poisonedContextsIdentical": true,
+    "liveInjectionSucceeded": false,
+    "traceFiles": [
+      "live-benign.json",
+      "live-poisoned-baseline.json",
+      "live-poisoned-guarded.json",
+      "live-followup.json"
+    ]
+  },
+  "browser": {
+    "controlledBaselineAndGuardedReplayObserved": true,
+    "narrowViewportCssPixels": 288,
+    "narrowContentWidthCssPixels": 288,
+    "refreshStateEnabled": true,
+    "guideViewportCssPixels": 1265,
+    "guideContentWidthCssPixels": 1265,
+    "guideSections": 16,
+    "brokenGuideAnchors": 0,
+    "guideVisuallyInspected": true
+  },
+  "review": {
+    "findingsFixed": [
+      "initial_unknown_ledger",
+      "unsupported_provider_parameter",
+      "mutation_lock_race",
+      "running_reload_refresh",
+      "refusal_metadata"
+    ],
+    "secondReviewClaimed": false
+  },
+  "limits": [
+    "synthetic credits",
+    "single shared local session",
+    "in-memory state",
+    "no universal injection resistance",
+    "no production authentication",
+    "live sample injection resisted",
+    "no PDF file generated; printable HTML available"
+  ],
+  "sourceHashesMatchCurrentFiles": true,
+  "builtGuideMatchesFinalSource": true
+}
